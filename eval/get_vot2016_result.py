@@ -6,12 +6,12 @@ import cv2
 from os import makedirs
 from os.path import join, isdir
 
-from lib.log_helper import init_log, add_file_handler
-from lib.bbox_helper import get_axis_aligned_bbox, cxy_wh_2_rect
-from lib.benchmark_helper import load_dataset
+from libs.log_helper import init_log, add_file_handler
+from libs.bbox_helper import get_axis_aligned_bbox, cxy_wh_2_rect
+from libs.benchmark_helper import load_dataset
 
 
-from lib.pysot.utils import region
+from libs.pysot.utils import region
 from cftracker.mosse import MOSSE
 from cftracker.staple import Staple
 from cftracker.dsst import DSST
@@ -29,7 +29,7 @@ from cftracker.strcf import STRCF
 from cftracker.mccth_staple import MCCTHStaple
 from cftracker.opencv_cftracker import OpenCVCFTracker
 
-from lib.eco.config import vot16_deep_config,vot16_hc_config
+from libs.eco.config import vot16_deep_config,vot16_hc_config
 from cftracker.config import ldes_config,dsst_config,csrdcf_config,staple_config,mkcf_up_config,mccth_staple_config
 parser = argparse.ArgumentParser(description='Test')
 

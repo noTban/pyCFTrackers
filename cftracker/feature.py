@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from lib.eco.features.features import fhog,TableFeature
+from libs.eco.features.features import fhog,TableFeature
 
 
 def extract_hog_feature(img, cell_size=4):
@@ -9,7 +9,7 @@ def extract_hog_feature(img, cell_size=4):
 
 
 def extract_pyhog_feature(img, cell_size=4):
-    from lib import fhog as pyfhog
+    from libs import fhog as pyfhog
     h,w=img.shape[:2]
     img=cv2.resize(img,(w+2*cell_size,h+2*cell_size))
     mapp = {'sizeX': 0, 'sizeY': 0, 'numFeatures': 0, 'map': 0}
